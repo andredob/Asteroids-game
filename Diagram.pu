@@ -1,0 +1,54 @@
+@startuml
+abstract class Element{
+  x : int
+  y : int
+  velX : double
+  velY : double
+  state : boolean
+  ray : double
+  {abstract} testCrash(Element)
+  show()
+
+}
+
+class Ship{
+  angle : double
+  {static} dtMin : int
+  life : int
+
+  shot()
+  move()
+}
+
+class Asteroid{
+
+
+}
+
+class Missile{
+  {static} t : int
+  t0 : int
+}
+
+class Universe{
+  time : int
+  update()
+  creatAsteroid()
+  recreateShip()
+  recreateAsteroid()
+}
+
+class Game{
+  score : int
+  state : {"start", "game", "game over"}
+  paused : boolean
+  setGameOver()
+}
+
+Universe "1" *-- "n" Element
+Game "1" *-- "1" Universe
+Element <|-- Ship
+Element <|-- Missile
+Element <|-- Asteroid
+
+@enduml

@@ -1,0 +1,21 @@
+update(){
+  0) t = t + 1
+  1)Para todo Elemento e
+      -Atualizar posição
+        x += velX
+        y += velY
+  2)Para todo Missile M
+      se t > M.t0 + M.t então eliminar M
+  3)Para todo Asteroid A
+      se a nave.testCrash(A) == True
+        então
+          se nave.vida == 1
+            setGameOver()
+          else
+            reacriarNave()
+  4)Para todo Asteroid A
+      Para todo Missile M
+        se A.testCrash(M) == True então
+          deletar A
+          A.recreateAsteroid()
+}

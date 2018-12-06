@@ -127,7 +127,7 @@ public class Universe extends JPanel implements Runnable {
                 Logger.getLogger(Universe.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        System.out.println("Perdeu otário!!!");
+        System.out.println("Perdeu!!! GG");
     }
 
     public List<Element> getElementsList() {

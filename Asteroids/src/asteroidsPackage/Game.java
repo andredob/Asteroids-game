@@ -50,7 +50,7 @@ public class Game {
         int notY = (int) Universe.getInstance().ship.getY();
 
         ship = Universe.getInstance().ship;
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 8; i++) {
             double x = Math.random() * w;
             double y = Math.random() * h;
             double vx = Math.random() * 5;
